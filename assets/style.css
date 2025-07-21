@@ -1,0 +1,14 @@
+body {
+  font-family: sans-serif;
+  background: #fffdf7;
+  color: #222;
+  line-height: 1.6;
+  margin: 0;
+}
+main {
+  padding: 2rem;
+}
+a {
+  color: #a46497;
+  text-decoration: none;
+}
