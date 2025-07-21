@@ -15,3 +15,6 @@ Explore visionary updates, product reveals, and reflections on the intersection 
         <h2 class="blog-title">{{ post.title }}</h2>
       </a>
       <p class="blog-date">{{ post.date | date: "%B %d, %Y" }}</p>
+    </div>
+  {% endfor %}
+</div>
