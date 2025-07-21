@@ -1,104 +1,20 @@
----
-# ✅ home.html
----
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{{ page.title }} | Infinity Rising Creative</title>
-  <meta name="description" content="{{ page.description | default: 'Infinity Rising Creative blends visionary tech, spiritual design, and conscious innovation.' }}" />
-  <link rel="stylesheet" href="/assets/css/main.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
-</head>
-<body>
-  <div class="site-container">
-    <header class="site-header">
-      <h1>{{ page.title }}</h1>
-      <p class="tagline">Welcome to Infinity Rising Creative</p>
-      <nav>
-        <a href="/">Home</a>
-        <a href="/apps/">Apps</a>
-        <a href="/blog/">Blog</a>
-        <a href="/about/">About</a>
-      </nav>
-    </header>
-
-    <main class="tiles">
-      <div class="tile">
-        <h3>✨ Welcome</h3>
-        <p>We blend spiritual wisdom with visionary tech to create tools that uplift and simplify life.</p>
-        <a href="/newsletter/" class="btn">Join the Inner Circle</a>
-      </div>
-      <div class="tile">
-        <h3>📱 Explore Our Apps</h3>
-        <p>Our apps are built for soulful living and smart productivity.</p>
-        <a href="/apps/" class="btn">Discover More</a>
-      </div>
-      <div class="tile">
-        <h3>📰 Read the Blog</h3>
-        <p>Insights from the intersection of consciousness and code.</p>
-        <a href="/blog/" class="btn">Visit Blog</a>
-      </div>
-    </main>
-
-    <footer class="site-footer">
-      &copy; {{ site.time | date: '%Y' }} Infinity Rising Creative. All rights reserved.
-    </footer>
-  </div>
-</body>
-</html>
-
-
----
-# ✅ post.html
----
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }} | Infinity Rising Creative</title>
-  <link rel="stylesheet" href="/assets/css/main.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
-</head>
-<body>
-  <div class="site-container">
-    <article class="tile">
-      <h1>{{ page.title }}</h1>
-      <p class="post-date">Published {{ page.date | date: "%B %d, %Y" }}</p>
-      <div class="post-content">
-        {{ content }}
-      </div>
-      <a href="/blog/" class="btn">← Back to Blog</a>
-    </article>
-
-    <footer class="site-footer">
-      &copy; {{ site.time | date: '%Y' }} Infinity Rising Creative
-    </footer>
-  </div>
-</body>
-</html>
-
-
----
-# ✅ glassy.html
----
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }} | Infinity Rising Creative</title>
   <meta name="description" content="{{ page.description | default: 'Infinity Rising Creative blends visionary tech, spiritual design, and conscious innovation.' }}">
-  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/main.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="glassy-theme">
   <div class="site-container">
-    <header class="site-header">
-      <h1>{{ page.title }}</h1>
-      <nav>
+
+    <header class="site-header glassy-tile">
+      <h1 class="site-title">{{ page.title }}</h1>
+      <p class="tagline">A Sanctuary of Conscious Design + Visionary Tools</p>
+      <nav class="site-nav">
         <a href="/">Home</a>
         <a href="/apps/">Apps</a>
         <a href="/blog/">Blog</a>
@@ -106,13 +22,14 @@
       </nav>
     </header>
 
-    <main class="tiles">
+    <main class="tiles-grid">
       {{ content }}
     </main>
 
-    <footer class="site-footer">
-      &copy; {{ site.time | date: '%Y' }} Infinity Rising Creative
+    <footer class="site-footer glassy-tile">
+      <p>&copy; {{ site.time | date: '%Y' }} Infinity Rising Creative. All rights reserved.</p>
     </footer>
+
   </div>
 </body>
 </html>
