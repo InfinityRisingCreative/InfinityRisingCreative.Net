@@ -1,104 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{{ page.title }} | Infinity Rising Creative</title>
-  <meta name="description" content="{{ page.description | default: 'Infinity Rising Creative blends visionary tech, spiritual design, and conscious innovation.' }}" />
+  <meta charset="UTF-8">
+  <title>{{ page.title }} · {{ site.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Fonts & Styles -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- Optional animation library (for fade-in, slide-up) -->
   <style>
-    body {
-      font-family: 'Helvetica Neue', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(to bottom right, #f3ecf4, #e8e0ec);
-      color: #222;
-      display: flex;
-      justify-content: center;
-    }
-
-    main {
-      max-width: 1200px;
-      width: 100%;
-      padding: 3rem 2rem;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      box-sizing: border-box;
-    }
-
-    .tile {
-      background: rgba(255, 255, 255, 0.4);
-      backdrop-filter: blur(12px);
-      border-radius: 20px;
-      padding: 2rem;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-
-    .tile:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 28px rgba(0,0,0,0.12);
-    }
-
-    .tile h3 {
-      color: #6e3690;
-      margin-bottom: 0.5rem;
-    }
-
-    .tile p {
-      color: #444;
-      margin-bottom: 1.2rem;
-    }
-
-    .btn {
-      background: #6e3690;
-      color: white;
-      padding: 0.6rem 1.2rem;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.2s ease;
-    }
-
-    .btn:hover {
-      background: #824aa3;
-    }
-
-    header, footer {
-      text-align: center;
-      font-size: 0.9rem;
-      color: #666;
-      margin: 2rem 0;
-    }
-
-    a {
-      color: #6e3690;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
+    html {
+      scroll-behavior: smooth;
     }
   </style>
 </head>
+
 <body>
-  <div class="site-container">
-    <header>
-      <h1>{{ site.title }}</h1>
-      {% include nav.html %}
-    </header>
+  <header class="navbar">
+    <div class="container">
+      <div class="brand"><a href="/">Infinity Rising Creative</a></div>
+      <nav class="nav-links">
+        <a href="/">Home</a>
+        <a href="/blog/">Blog</a>
+        <a href="/about/">About</a>
+        <a href="/newsletter/">Newsletter</a>
+      </nav>
+    </div>
+  </header>
 
-    <main>
-      {{ content }}
-    </main>
+  <main class="main-content fade-in">
+    {{ content }}
+  </main>
 
-    <footer>
-      &copy; {{ site.time | date: "%Y" }} Infinity Rising Creative · All Rights Reserved
-    </footer>
-  </div>
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; {{ site.time | date: '%Y' }} Infinity Rising Creative · All rights reserved.</p>
+      <p><a href="mailto:hello@infinityrisingcreative.net">hello@infinityrisingcreative.net</a></p>
+      <p><a href="https://instagram.com/infinityrisingcreative" target="_blank">@infinityrisingcreative</a></p>
+    </div>
+  </footer>
 </body>
 </html>
