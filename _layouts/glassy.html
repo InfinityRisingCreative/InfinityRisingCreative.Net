@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }} | Infinity Rising</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Fonts & Styles -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/glassy.css">
+</head>
+<body>
+
+  <div class="glass-container">
+    <header class="site-header">
+      <h1><a href="/">∞ Infinity Rising</a></h1>
+    </header>
+
+    <main class="site-content">
+      {{ content }}
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; {{ site.time | date: "%Y" }} Infinity Rising Creative</p>
+    </footer>
+  </div>
+
+</body>
+</html>
