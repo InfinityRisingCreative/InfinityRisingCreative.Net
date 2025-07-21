@@ -1,17 +1,40 @@
-/* Font & Base Reset */
+/*=============================
+  Theme Variables
+=============================*/
+:root {
+  --font-base: 'Inter', sans-serif;
+  --color-primary: #6e3690;
+  --color-primary-dark: #502d6c;
+  --color-bg: #f9f7fd;
+  --color-glass-bg: rgba(255, 255, 255, 0.65);
+  --color-glass-border: rgba(255, 255, 255, 0.18);
+  --color-text: #2c2c2c;
+  --color-heading: #1a1a1a;
+  --shadow-soft: 0 12px 24px rgba(0, 0, 0, 0.06);
+  --shadow-glass: 0 8px 32px rgba(31, 38, 135, 0.1);
+}
+
+/*=============================
+  Base Reset
+=============================*/
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-base);
   font-size: 18px;
   line-height: 1.6;
-  color: #2c2c2c;
-  background-color: #ffffff;
+  color: var(--color-text);
+  background-color: var(--color-bg);
   scroll-behavior: smooth;
+  background-image: radial-gradient(circle at 20% 30%, #f3eaff 0%, transparent 70%);
 }
 
 h1, h2, h3, h4 {
-  color: #1a1a1a;
+  color: var(--color-heading);
   font-weight: 600;
   line-height: 1.2;
   margin-top: 0;
@@ -22,22 +45,28 @@ p {
   margin-bottom: 1em;
 }
 
-/* Layout Containers */
+/*=============================
+  Layout
+=============================*/
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
-/* Navigation */
+/*=============================
+  Navbar
+=============================*/
 .navbar {
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid #e0e0e0;
+  background: var(--color-glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--color-glass-border);
   padding: 20px 0;
   position: sticky;
   top: 0;
   z-index: 1000;
+  box-shadow: var(--shadow-glass);
 }
 
 .navbar .container {
@@ -49,7 +78,7 @@ p {
 .brand {
   font-size: 1.4rem;
   font-weight: bold;
-  color: #6e3690;
+  color: var(--color-primary);
 }
 
 nav a {
@@ -61,27 +90,34 @@ nav a {
 }
 
 nav a:hover {
-  color: #6e3690;
+  color: var(--color-primary);
 }
 
-/* Hero Section */
+/*=============================
+  Hero Section
+=============================*/
 .hero {
   text-align: center;
   padding: 100px 20px 60px;
-  background-color: #f8f6fc;
+  background-color: transparent;
 }
 
 .hero-title {
-  font-size: 2.8rem;
+  font-size: 3rem;
+  font-weight: 700;
   margin-bottom: 10px;
+  color: var(--color-primary-dark);
 }
 
 .hero-subtitle {
-  font-size: 1.3rem;
-  color: #6e3690;
+  font-size: 1.4rem;
+  color: var(--color-primary);
+  opacity: 0.9;
 }
 
-/* Tiles Section */
+/*=============================
+  Tiles Section
+=============================*/
 .tiles {
   display: flex;
   flex-wrap: wrap;
@@ -91,17 +127,22 @@ nav a:hover {
 }
 
 .tile {
-  background-color: #ffffff;
-  border-radius: 16px;
-  padding: 30px;
+  background: var(--color-glass-bg);
+  border: 1px solid var(--color-glass-border);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 24px;
+  padding: 32px;
   width: 100%;
   max-width: 340px;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
-  transition: transform 0.3s ease;
+  box-shadow: var(--shadow-glass);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
 }
 
 .tile:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
 }
 
 .card h3 {
@@ -114,7 +155,9 @@ nav a:hover {
   margin-bottom: 20px;
 }
 
-/* Buttons */
+/*=============================
+  Buttons
+=============================*/
 .btn {
   display: inline-block;
   padding: 12px 24px;
@@ -122,22 +165,28 @@ nav a:hover {
   font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
-  transition: background-color 0.3s ease;
   cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .primary-btn {
-  background-color: #6e3690;
+  background-color: var(--color-primary);
   color: #fff;
+  box-shadow: 0 4px 12px rgba(110, 54, 144, 0.3);
 }
 
 .primary-btn:hover {
-  background-color: #502d6c;
+  background-color: var(--color-primary-dark);
+  transform: scale(1.03);
 }
 
-/* Footer */
+/*=============================
+  Footer
+=============================*/
 .footer {
-  background-color: #f2f2f2;
+  background: var(--color-glass-bg);
+  border-top: 1px solid var(--color-glass-border);
+  backdrop-filter: blur(10px);
   text-align: center;
   padding: 40px 20px;
   font-size: 0.9rem;
@@ -148,7 +197,9 @@ nav a:hover {
   margin: 6px 0;
 }
 
-/* Animations */
+/*=============================
+  Animations
+=============================*/
 .fade-in {
   opacity: 0;
   animation: fadeIn ease-in 1;
@@ -168,7 +219,9 @@ nav a:hover {
   }
 }
 
-/* Responsive */
+/*=============================
+  Responsive Design
+=============================*/
 @media (max-width: 768px) {
   .tiles {
     flex-direction: column;
