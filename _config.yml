@@ -2,4 +2,5 @@ title: Infinity Rising Creative
 description: A visionary tech studio blending spiritual design with digital innovation. We create digital experiences intended to uplift, inspire, and simplify.
 baseurl: ""
 url: "https://infinityrisingcreative.net"
-theme: minima
+theem: serif
+#theme: minima
