@@ -1,115 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-  <style>
-  body {
-    font-family: 'Helvetica Neue', sans-serif;
-    background: linear-gradient(to bottom, #f3ecf4, #e8e0ec);
-    margin: 0;
-    padding: 2rem;
-    color: #333;
-  }
+---
+layout: glassy
+title: Welcome
+permalink: /
+---
 
-  .tiles {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-  }
+<div class="tile">
+  <h3>✨ Welcome to Infinity Rising Creative</h3>
+  <p>We blend spiritual wisdom with visionary tech to create apps and tools that uplift, inspire, and simplify life.</p>
+  <a class="btn" href="/newsletter/">Join the Inner Circle</a>
+</div>
 
-  .tile {
-    background: rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-    padding: 1.5rem;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.07);
-    transition: transform 0.2s ease;
-    text-align: center;
-  }
+<div class="tile">
+  <h3>📱 Explore Our Apps</h3>
+  <p>From puppy training to yoga journeys, our apps are built for soulful living and smart productivity.</p>
+  <a class="btn" href="/apps/">Discover More</a>
+</div>
 
-  .tile:hover {
-    transform: translateY(-5px);
-  }
-
-  .tile h3 {
-    color: #6e3690;
-    margin-bottom: 0.5rem;
-  }
-
-  .btn {
-    display: inline-block;
-    margin-top: 1rem;
-    background: #6e3690;
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: bold;
-  }
-
-  a {
-    color: #6e3690;
-    text-decoration: none;
-  }
-
-  a:hover {
-    text-decoration: underline;
-  }
-
-  header, footer {
-    text-align: center;
-    margin-top: 2rem;
-    font-size: 0.9rem;
-    color: #666;
-  }
-
-  main {
-    max-width: 900px;
-    margin: 0 auto;
-  }
-</style>
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{{ page.title }} | Infinity Rising Creative</title>
-  <meta name="description" content="{{ page.description | default: 'Infinity Rising Creative blends visionary tech, spiritual design, and conscious innovation.' }}" />
-  <link rel="stylesheet" href="/assets/css/main.css" />
-  <style>
-    
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Roboto, sans-serif;
-      background: linear-gradient(to right, #f0e5f9, #e9f7fb);
-      background-attachment: fixed;
-      color: #222;
-    }
-
-    .site-container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 2rem;
-    }
-
-    header {
-      text-align: center;
-      padding: 2rem 0;
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-      color: #6e3690;
-      margin: 0;
-      letter-spacing: 1px;
-    }
-
-    nav {
-      text-align: center;
-      margin-top: 1rem;
-    }
-
-    nav a {
-      margin: 0 1rem;
-      text-decoration: none;
-      color: #6e3690;
-      font-weight: 500;
-    }
+<div class="tile">
+  <h3>📝 Read the Blog</h3>
+  <p>Insights from the intersection of consciousness and code. Stay inspired and informed.</p>
+  <a class="btn" href="/blog/">Visit Blog</a>
+</div>
