@@ -1,157 +1,166 @@
-/* Base styles */
+/* Font & Base Reset */
 body {
   margin: 0;
+  padding: 0;
   font-family: 'Inter', sans-serif;
-  background: #fdfbff;
-  color: #1e1e1e;
-  line-height: 1.6;
   font-size: 18px;
-  padding-top: 80px; /* for sticky nav */
+  line-height: 1.6;
+  color: #2c2c2c;
+  background-color: #ffffff;
+  scroll-behavior: smooth;
 }
 
-/* Typography */
-h1, h2, h3 {
+h1, h2, h3, h4 {
+  color: #1a1a1a;
   font-weight: 600;
+  line-height: 1.2;
   margin-top: 0;
-  color: #000;
-}
-
-h1 {
-  font-size: 2.5rem;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-h3 {
-  font-size: 1.5rem;
 }
 
 p {
-  margin: 0.5em 0 1.2em;
+  margin-top: 0;
+  margin-bottom: 1em;
 }
 
 /* Layout Containers */
 .container {
-  max-width: 960px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 24px;
 }
 
-/* Navbar */
+/* Navigation */
 .navbar {
-  position: fixed;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #e0e0e0;
+  padding: 20px 0;
+  position: sticky;
   top: 0;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(12px);
-  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
-  z-index: 999;
+  z-index: 1000;
 }
 
 .navbar .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 64px;
 }
 
-.navbar .brand a {
-  font-weight: 700;
-  font-size: 1.25rem;
-  color: #1e1e1e;
-  text-decoration: none;
-}
-
-.nav-links a {
-  margin-left: 1.5rem;
-  color: #333;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.2s ease;
-}
-
-.nav-links a:hover {
+.brand {
+  font-size: 1.4rem;
+  font-weight: bold;
   color: #6e3690;
 }
 
-/* Main Content */
-.main-content {
-  padding: 2rem 1.5rem;
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
-/* Tiles */
+nav a:hover {
+  color: #6e3690;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 100px 20px 60px;
+  background-color: #f8f6fc;
+}
+
+.hero-title {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  color: #6e3690;
+}
+
+/* Tiles Section */
 .tiles {
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 60px 20px;
 }
 
 .tile {
-  background: #fff;
-  border-radius: 12px;
-  padding: 1.75rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 30px;
+  width: 100%;
+  max-width: 340px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
 }
 
 .tile:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
 }
 
-.tile h3 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  color: #6e3690;
+.card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1rem;
+  margin-bottom: 20px;
 }
 
 /* Buttons */
 .btn {
   display: inline-block;
-  padding: 0.6rem 1.2rem;
-  background-color: #6e3690;
-  color: #fff;
-  border-radius: 8px;
-  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-size: 1rem;
   font-weight: 600;
-  font-size: 0.95rem;
-  transition: background-color 0.2s ease;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
 }
 
-.btn:hover {
-  background-color: #5a2c7c;
+.primary-btn {
+  background-color: #6e3690;
+  color: #fff;
+}
+
+.primary-btn:hover {
+  background-color: #502d6c;
 }
 
 /* Footer */
 .footer {
+  background-color: #f2f2f2;
   text-align: center;
-  padding: 2rem 1rem;
-  background: #f4f0fa;
+  padding: 40px 20px;
   font-size: 0.9rem;
   color: #666;
 }
 
-.footer a {
-  color: #6e3690;
-  text-decoration: none;
+.footer p {
+  margin: 6px 0;
 }
 
-.footer a:hover {
-  text-decoration: underline;
-}
-
-/* Animation */
+/* Animations */
 .fade-in {
-  animation: fadeIn 0.8s ease-in-out both;
+  opacity: 0;
+  animation: fadeIn ease-in 1;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-delay: 0.3s;
 }
 
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(12px);
+    transform: translateY(10px);
   }
   to {
     opacity: 1;
@@ -159,26 +168,23 @@ p {
   }
 }
 
-/* Responsive Tweaks */
-@media (max-width: 600px) {
-  h1 {
-    font-size: 2rem;
+/* Responsive */
+@media (max-width: 768px) {
+  .tiles {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
   }
 
   .navbar .container {
     flex-direction: column;
     align-items: flex-start;
-    height: auto;
-    padding: 0.75rem 1.5rem;
   }
 
-  .nav-links {
-    margin-top: 0.5rem;
-  }
-
-  .nav-links a {
-    display: block;
-    margin-left: 0;
-    margin-bottom: 0.5rem;
+  nav a {
+    margin: 10px 0 0 0;
   }
 }
