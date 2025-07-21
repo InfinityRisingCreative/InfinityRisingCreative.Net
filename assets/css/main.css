@@ -1,0 +1,80 @@
+/* main.css — Shared styles across site */
+
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  background: linear-gradient(to bottom right, #fefefe, #f3ecf4);
+  color: #222;
+  margin: 0;
+  padding: 0;
+  background-attachment: fixed;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.tile {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+.tile h3 {
+  color: #6e3690;
+  margin-bottom: 0.5rem;
+}
+
+.tile p {
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+a, .btn {
+  color: #6e3690;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover, .btn:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  background: #6e3690;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+header, footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 2rem;
+}
+
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #6e3690;
+  font-weight: 500;
+}
