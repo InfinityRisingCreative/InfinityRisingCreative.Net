@@ -1,3 +1,6 @@
+---
+# ✅ home.html
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,144 +8,110 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{{ page.title }} | Infinity Rising Creative</title>
   <meta name="description" content="{{ page.description | default: 'Infinity Rising Creative blends visionary tech, spiritual design, and conscious innovation.' }}" />
+  <link rel="stylesheet" href="/assets/css/main.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(to right, #f0e5f9, #e9f7fb);
-      background-attachment: fixed;
-      color: #222;
-    }
-
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0; left: 0; width: 100%; height: 100%;
-      background: radial-gradient(ellipse at top left, #ffffff 0%, transparent 70%),
-                  radial-gradient(ellipse at bottom right, #fefae0 0%, transparent 70%);
-      z-index: -1;
-      opacity: 0.4;
-    }
-
-    .site-container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 2rem;
-    }
-
-    header {
-      text-align: center;
-      padding: 2rem 0;
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-      font-family: 'Playfair Display', serif;
-      color: #6e3690;
-      margin: 0;
-      letter-spacing: 1px;
-    }
-
-    nav {
-      text-align: center;
-      margin-top: 1rem;
-    }
-
-    nav a {
-      margin: 0 1rem;
-      text-decoration: none;
-      color: #6e3690;
-      font-weight: 500;
-    }
-
-    .tiles {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-
-    .tile {
-      background: rgba(255, 255, 255, 0.15);
-      border: 1px solid rgba(255, 255, 255, 0.25);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08), inset 0 0 30px rgba(255,255,255,0.1);
-      backdrop-filter: blur(20px);
-      border-radius: 20px;
-      padding: 2rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .tile:hover {
-      transform: translateY(-6px) scale(1.02);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.1);
-    }
-
-    .tile h3 {
-      color: #6e3690;
-      font-family: 'Playfair Display', serif;
-      margin-bottom: 0.5rem;
-    }
-
-    .tile p {
-      color: #444;
-      margin-bottom: 1.2rem;
-    }
-
-    .btn {
-      background: linear-gradient(135deg, #a467a1, #824aa3);
-      box-shadow: 0 0 12px rgba(164,103,161,0.4);
-      color: white;
-      padding: 0.6rem 1.2rem;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
-    }
-
-    .btn:hover {
-      background: #824aa3;
-      box-shadow: 0 0 24px rgba(164,103,161,0.6);
-      transform: scale(1.05);
-    }
-
-    a {
-      color: #6e3690;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 2rem;
-      font-size: 0.9rem;
-      color: #666;
-    }
-  </style>
 </head>
 <body>
   <div class="site-container">
-    <header>
+    <header class="site-header">
       <h1>{{ page.title }}</h1>
+      <p class="tagline">Welcome to Infinity Rising Creative</p>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/apps/">Apps</a>
+        <a href="/blog/">Blog</a>
+        <a href="/about/">About</a>
+      </nav>
     </header>
+
     <main class="tiles">
-      {% for post in site.posts %}
       <div class="tile">
-        <h3>{{ post.title }}</h3>
-        <p>{{ post.date | date: "%B %d, %Y" }}</p>
-        <a href="{{ post.url }}" class="btn">Read More</a>
+        <h3>✨ Welcome</h3>
+        <p>We blend spiritual wisdom with visionary tech to create tools that uplift and simplify life.</p>
+        <a href="/newsletter/" class="btn">Join the Inner Circle</a>
       </div>
-      {% endfor %}
+      <div class="tile">
+        <h3>📱 Explore Our Apps</h3>
+        <p>Our apps are built for soulful living and smart productivity.</p>
+        <a href="/apps/" class="btn">Discover More</a>
+      </div>
+      <div class="tile">
+        <h3>📰 Read the Blog</h3>
+        <p>Insights from the intersection of consciousness and code.</p>
+        <a href="/blog/" class="btn">Visit Blog</a>
+      </div>
     </main>
-    <footer>
-      &copy; {{ site.time | date: "%Y" }} Infinity Rising Creative
+
+    <footer class="site-footer">
+      &copy; {{ site.time | date: '%Y' }} Infinity Rising Creative. All rights reserved.
+    </footer>
+  </div>
+</body>
+</html>
+
+
+---
+# ✅ post.html
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} | Infinity Rising Creative</title>
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="site-container">
+    <article class="tile">
+      <h1>{{ page.title }}</h1>
+      <p class="post-date">Published {{ page.date | date: "%B %d, %Y" }}</p>
+      <div class="post-content">
+        {{ content }}
+      </div>
+      <a href="/blog/" class="btn">← Back to Blog</a>
+    </article>
+
+    <footer class="site-footer">
+      &copy; {{ site.time | date: '%Y' }} Infinity Rising Creative
+    </footer>
+  </div>
+</body>
+</html>
+
+
+---
+# ✅ glassy.html
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} | Infinity Rising Creative</title>
+  <meta name="description" content="{{ page.description | default: 'Infinity Rising Creative blends visionary tech, spiritual design, and conscious innovation.' }}">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="site-container">
+    <header class="site-header">
+      <h1>{{ page.title }}</h1>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/apps/">Apps</a>
+        <a href="/blog/">Blog</a>
+        <a href="/about/">About</a>
+      </nav>
+    </header>
+
+    <main class="tiles">
+      {{ content }}
+    </main>
+
+    <footer class="site-footer">
+      &copy; {{ site.time | date: '%Y' }} Infinity Rising Creative
     </footer>
   </div>
 </body>
