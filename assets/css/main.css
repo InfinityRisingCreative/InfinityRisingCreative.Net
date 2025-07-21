@@ -1,80 +1,131 @@
-/* main.css — Shared styles across site */
-
+/* Base styles */
 body {
-  font-family: 'Helvetica Neue', sans-serif;
-  background: linear-gradient(to bottom right, #fefefe, #f3ecf4);
-  color: #222;
+  font-family: 'Inter', 'Helvetica Neue', sans-serif;
+  background: linear-gradient(to bottom right, #f3ecf4, #e8e0ec);
   margin: 0;
   padding: 0;
-  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-main {
+/* Glassy Theme Wrapper */
+.glassy-theme .site-container {
+  width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 3rem 2rem;
-}
-
-.tiles {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-}
-
-.tile {
-  background: rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(14px);
-  border-radius: 20px;
   padding: 2rem;
+  box-sizing: border-box;
+}
+
+/* Glassy Tiles */
+.glassy-tile {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Grid Layout for Content Tiles */
+.tiles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  width: 100%;
+}
+
+/* Individual Tiles */
+.tile {
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 1.5rem;
   box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-  text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  color: #222;
 }
 
 .tile:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
 }
 
 .tile h3 {
   color: #6e3690;
+  font-weight: 600;
   margin-bottom: 0.5rem;
 }
 
 .tile p {
-  color: #444;
+  color: #333;
   margin-bottom: 1rem;
 }
 
-a, .btn {
-  color: #6e3690;
+/* Buttons */
+.btn {
+  display: inline-block;
+  background: #6e3690;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 12px;
   text-decoration: none;
   font-weight: 600;
+  transition: background 0.2s ease;
 }
 
-a:hover, .btn:hover {
+.btn:hover {
+  background: #824aa3;
+}
+
+/* Navigation */
+.site-nav a {
+  margin: 0 1rem;
+  font-weight: 500;
+  color: #6e3690;
+  text-decoration: none;
+}
+
+.site-nav a:hover {
   text-decoration: underline;
 }
 
-.btn {
-  background: #6e3690;
-  color: white;
-  padding: 0.6rem 1.2rem;
-  border-radius: 10px;
-  display: inline-block;
-  margin-top: 1rem;
-}
-
-header, footer {
+/* Header */
+.site-header {
   text-align: center;
-  font-size: 0.9rem;
-  color: #666;
-  margin-top: 2rem;
 }
 
-nav a {
-  margin: 0 1rem;
-  text-decoration: none;
-  color: #6e3690;
-  font-weight: 500;
+.site-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #4b286d;
+  margin-bottom: 0.3rem;
+}
+
+.tagline {
+  font-style: italic;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  color: #666;
+  font-size: 0.85rem;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Color Palette Enhancements */
+:root {
+  --white: #ffffff;
+  --gold: #f3d06f;
+  --green: #a3d9a5;
+  --purple: #6e3690;
 }
