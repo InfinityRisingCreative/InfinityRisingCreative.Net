@@ -1,5 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+  <style>
+  body {
+    font-family: 'Helvetica Neue', sans-serif;
+    background: linear-gradient(to bottom, #f3ecf4, #e8e0ec);
+    margin: 0;
+    padding: 2rem;
+    color: #333;
+  }
+
+  .tiles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .tile {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+    transition: transform 0.2s ease;
+    text-align: center;
+  }
+
+  .tile:hover {
+    transform: translateY(-5px);
+  }
+
+  .tile h3 {
+    color: #6e3690;
+    margin-bottom: 0.5rem;
+  }
+
+  .btn {
+    display: inline-block;
+    margin-top: 1rem;
+    background: #6e3690;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  a {
+    color: #6e3690;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  header, footer {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #666;
+  }
+
+  main {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+</style>
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,6 +75,7 @@
   <meta name="description" content="{{ page.description | default: 'Infinity Rising Creative blends visionary tech, spiritual design, and conscious innovation.' }}" />
   <link rel="stylesheet" href="/assets/css/main.css" />
   <style>
+    
     body {
       margin: 0;
       font-family: 'Segoe UI', Roboto, sans-serif;
