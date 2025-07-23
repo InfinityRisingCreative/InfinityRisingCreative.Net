@@ -11,23 +11,23 @@ Infinity Rising Creative is a visionary tech studio building intuitive mobile ap
 
 ## ✨ Our Mobile Apps
 
-- **Snowy’s Puppy Training** – A gamified puppy coaching experience  
-- **Kundalini Awakening Timer** – Guided yoga & energy flows  
-- **Sage Garden** – Plant care synced with moon & nature rhythms  
+- **Snowy’s Puppy Training** – Puppy Training App  
+- **Yoga Interval Timer** – Guided yoga & energy flows  
+- **Sage Garden** – Plant care 
 
 ## 📦 Digital Products
 
-- Spiritual eBooks & Journals  
+-  eBooks & Journal Templates
 - Affirmation & Teaching Cards (coming soon)  
 - AI-Powered Journaling Templates  
 
 ## 💡 Technology Services
 
-- App Development (Flutter, Firebase, Python)  
+- App Development 
 - Data Engineering & Automation  
-- Creative Business Systems for Wellness Brands  
+- Creative Business Systems for Wellness Brands and Small Businesses
 
 ## 📫 Contact
 
-- Email: hello@infinityrisingcreative.net  
-- Instagram: [@infinityrisingcreative](https://instagram.com/infinityrisingcreative)
+- Email: info@infinityrisingcreative.net  
+
